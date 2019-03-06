@@ -3,8 +3,12 @@ PImage mustache;
   
 void setup() {
   Mickey = loadImage("Mickey.jpg");
-  size(800, 600);
-  friend.resize(width,height);
+  size(1000, 1000);
+  Mickey.resize(width,height);
+  mustache = loadImage("mustache.png");
+  mustache.resize(800,200);
 }
-draw() {
+void draw() {
+background(Mickey);
+image(mustache,385,690);
 }
