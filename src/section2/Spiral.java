@@ -9,7 +9,6 @@ public class Spiral {
 	Robot bb8 = new Robot(); 	
 		// 5. Set your robot's pen down 
 		bb8.penDown();
-		bb8.setPenWidth(5);
 		// 3. Set the robot to go at max speed (100)
 		bb8.setSpeed(100);
 		// 4. Use a for loop to repeat steps #7 to #8, 75 times
@@ -18,10 +17,11 @@ public class Spiral {
 			// 7. Change the pen color to random
 			bb8.setRandomPenColor();
 			// 6. Move the robot 5 times the loop counter (5*i)
-			bb8.move(100);
+			bb8.move(5*i);
 			// 2. Turn the robot 360/7 degrees to the right
 		bb8.turn(360/7);
 			// 8. Set the pen width to i
-			
+		bb8.setPenWidth(5);
+		}
 	}
 }
