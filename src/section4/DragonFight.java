@@ -16,7 +16,7 @@ public class DragonFight {
 		// 3. Create a variable called "dragonHealth" to store the dragon's health (set it equal to 100)
 	int dragonHealth = 100;	
 		// 4. Create a variable to hold the damage the player's attack does each round
-	int playerDamage = 5;	
+	int playerDamage = 10;	
 		// 5. Create a variable to hold the damage the dragon's attack does each round
 	int dragonDamage = 10;	
 		
@@ -62,14 +62,14 @@ public class DragonFight {
 		
 		// 14. Else if the dragon's health is less than or equal to 0
 		else if(dragonHealth<= 0) {
-			String mess = JOptionPane.showInputDialog("the Dragon died, OH NO, take the gold");
+			JOptionPane.showMessageDialog(null,"the Dragon died, OH NO, take the gold");
 		}
 			//-- Tell the user that the dragon is dead and they took a ton of gold!
 			
 	   //  15.  Else
 		
 		else {
-			JOptionPane.showMessageDialog ("lol");
+			JOptionPane.showMessageDialog (null,"Your health is "+playerHealth+". The dragon's health is "+dragonHealth);
 		}
 			//-- Pop up a message that tells the their current health and the dragon's currently health (Bonus: Also display the amount of health that was lost for each player this round)
 			

@@ -16,44 +16,51 @@ import org.jointheleague.graphical.robot.Robot;
 public class RobotTreasureHunt implements KeyEventDispatcher{
 
 	// 1. Create a new mini robot (type "mini" inside the parentheses)
-	
+	Robot bb8 = new Robot("mini");
 	private void goUp() throws InterruptedException {
 		// 2. Make the robot move up the screen (use setAngle(angle) and microMove(distance))
-		
+		bb8.setAngle(0);
+		bb8.microMove(5);
 	}
 
 	private void goDown() throws InterruptedException{
 		// 3. make the robot move down the screen (use setAngle(angle) and microMove(distance))
-		
+		bb8.setAngle(180);
+		bb8.microMove(5);
 	}
 
 	private void turnLeft() throws InterruptedException{
 		// 4. Make the robot turn to the left (use setAngle(angle) and microMove(distance))
-
+bb8.setAngle(-90);
+bb8.microMove(5);
 	}
 
 	private void turnRight() throws InterruptedException{
 		// 5. make the robot turn to the right (use setAngle(angle) and microMove(distance))
-		
+		bb8.setAngle(90);
+		bb8.microMove(5);
 	}
 
 	private void spaceBarWasPressed() {
 
 		// 5. Change ROBOTNAME below to match the name of the robot you created in step 1.  THEN, remove the slashes at the beginning of the next two lines
-		//int robotXLocation = ROBOTNAME.getX();
-		//int robotYLocation = ROBOTNAME.getY();
+		int robotXLocation = bb8.getX();
+		int robotYLocation = bb8.getY();
 		
 		// 6. Print the robotXLocation and robotYLocation variables to the console 
-		
+		System.out.println("x="+robotXLocation+"y"+robotYLocation);
 		// 7. If robot is at same location as the little girl
-		//      --make a pop-up tell the robot where to go next
-		
+		if(robotXLocation>700 && robotXLocation<750);
+		if(robotYLocation>400 && robotYLocation<450);
+		//      --make a pop-up tell he robot where to go next
+		JOptionPane.showMessageDialog(null,"Go to where the fire burns");
 		// 8. Give the user subsequent clues at different locations on the image
 		// (pirate robot, swamp, parrots, etc.)
 		
 		// 9.  If the robot is in the final location
 		//     --call the treasureFound() method
-		
+		if(robotXLocation>50 && robotXLocation<100 && robotYLocation>250 && robotYLocation<300) {
+		treasureFound();}
 	}
 
 	private void go() {
@@ -99,7 +106,7 @@ public class RobotTreasureHunt implements KeyEventDispatcher{
 	
 	static void treasureFound() {
 		try {
-			URI uri = new URI("https://www.youtube.com/watch?v=G0aIg4N6aro");
+			URI uri = new URI("https://www.youtube.com/watch?v=Z-kX46euI88");
 			java.awt.Desktop.getDesktop().browse(uri);
 		} catch (Exception e) {
 			e.printStackTrace();
